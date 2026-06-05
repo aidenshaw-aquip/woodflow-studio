@@ -48,9 +48,10 @@
   .hero h1{font-size:clamp(2.4rem,6vw,4.3rem);margin-bottom:14px}
   .hero .heb{font-family:"Fraunces",serif;font-size:clamp(1.1rem,2.4vw,1.5rem);direction:rtl;opacity:.92;margin-bottom:18px}
   .hero p{font-size:1.12rem;max-width:540px;margin-bottom:30px;opacity:.95}
-  .btn{display:inline-block;background:var(--teal);color:#fff;padding:14px 30px;border-radius:999px;font-weight:600;font-size:.95rem;transition:.2s}
+  .hero-actions{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+  .btn{display:inline-block;background:var(--teal);color:#fff;padding:14px 30px;border-radius:999px;font-weight:600;font-size:.95rem;text-align:center;transition:.2s}
   .btn:hover{background:var(--teal-dark);transform:translateY(-1px)}
-  .btn-outline{background:transparent;border:1.5px solid rgba(255,255,255,.6);margin-left:12px}
+  .btn-outline{background:transparent;border:1.5px solid rgba(255,255,255,.6)}
   .btn-outline:hover{background:rgba(255,255,255,.12)}
 
   /* Sections */
@@ -140,6 +141,10 @@
     .mobile-cart-btn{display:block}
     .menu-toggle{display:flex}
   }
+  @media(max-width:520px){
+    .hero-actions{align-items:stretch;gap:12px}
+    .hero-actions .btn{width:100%;max-width:280px}
+  }
   @media(max-width:380px){
     .wrap{padding:0 18px}
     nav{gap:14px}
@@ -181,8 +186,10 @@
     <h1>Unique pieces, where wood meets resin.</h1>
     <div class="heb">עבודות עץ ייחודיות בשילוב אפוקסי</div>
     <p>Wood Flow Studio crafts one-of-a-kind woodwork — live-edge river tables, hand-poured mezuzahs and bespoke design pieces — each shaped from olive wood and flowing epoxy resin, made to order.</p>
-    <a href="#shop" class="btn">Explore the work</a>
-    <a href="#contact" class="btn btn-outline">Commission a piece</a>
+    <div class="hero-actions">
+      <a href="#shop" class="btn">Explore the work</a>
+      <a href="#contact" class="btn btn-outline">Commission a piece</a>
+    </div>
   </div>
 </section>
 
