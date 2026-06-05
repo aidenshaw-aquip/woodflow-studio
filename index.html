@@ -3,15 +3,17 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Wood Flow Studio — Handcrafted Wood</title>
-<meta name="description" content="Wood Flow Studio — handcrafted wooden furniture, homeware and bespoke commissions. Each piece made to order from sustainably sourced timber." />
+<title>Wood Flow Studio — Olive Wood &amp; Epoxy Resin Art</title>
+<meta name="description" content="Wood Flow Studio — unique handcrafted woodwork in olive wood and epoxy resin. Live-edge river tables, hand-poured mezuzahs and bespoke design pieces, made to order." />
+<link rel="icon" href="img/logo.jpg" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
 <style>
   :root{
-    --bg:#f6f1ea; --ink:#2b2018; --muted:#6f6256; --line:#e3d8c9;
-    --wood:#8a5a32; --wood-dark:#6b4424; --card:#fffaf3; --accent:#a9772e;
+    --bg:#f6f1ea; --ink:#241c15; --muted:#6f6256; --line:#e3d8c9;
+    --wood:#8a5a32; --wood-dark:#6b4424; --card:#fffaf3;
+    --teal:#1f7a6d; --teal-dark:#155b51; --accent:#1f7a6d;
   }
   *{box-sizing:border-box;margin:0;padding:0}
   html{scroll-behavior:smooth}
@@ -22,34 +24,37 @@
   .wrap{max-width:1140px;margin:0 auto;padding:0 24px}
 
   /* Nav */
-  header{position:sticky;top:0;z-index:50;background:rgba(246,241,234,.85);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+  header{position:sticky;top:0;z-index:50;background:rgba(246,241,234,.88);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
   nav{display:flex;align-items:center;justify-content:space-between;height:70px}
-  .brand{font-family:"Fraunces",serif;font-size:1.35rem;font-weight:600;letter-spacing:.02em}
-  .brand span{color:var(--wood)}
+  .brand{display:flex;align-items:center;gap:11px}
+  .brand img{width:40px;height:40px;border-radius:50%;object-fit:cover}
+  .brand .txt{font-family:"Fraunces",serif;font-size:1.18rem;font-weight:600;letter-spacing:.04em}
+  .brand .txt span{color:var(--teal)}
   .nav-links{display:flex;gap:30px;align-items:center;font-size:.93rem;font-weight:500}
-  .nav-links a:hover{color:var(--wood)}
-  .cart-btn{background:var(--wood);color:#fff;border:none;padding:9px 18px;border-radius:999px;font-size:.9rem;font-weight:600;cursor:pointer;font-family:inherit}
-  .cart-btn:hover{background:var(--wood-dark)}
+  .nav-links a:hover{color:var(--teal)}
+  .cart-btn{background:var(--teal);color:#fff;border:none;padding:9px 18px;border-radius:999px;font-size:.9rem;font-weight:600;cursor:pointer;font-family:inherit}
+  .cart-btn:hover{background:var(--teal-dark)}
   .menu-toggle{display:none;background:none;border:none;font-size:1.5rem;cursor:pointer}
 
   /* Hero */
-  .hero{position:relative;min-height:78vh;display:flex;align-items:center;
-    background:linear-gradient(rgba(43,32,24,.42),rgba(43,32,24,.55)),
-      url("https://images.unsplash.com/photo-1556228578-8c89e6adf883?auto=format&fit=crop&w=1600&q=80") center/cover;
+  .hero{position:relative;min-height:80vh;display:flex;align-items:center;
+    background:linear-gradient(rgba(20,15,11,.5),rgba(20,15,11,.62)),
+      url("img/river-table.jpg") center/cover;
     color:#fff}
-  .hero-inner{max-width:640px}
-  .hero .eyebrow{text-transform:uppercase;letter-spacing:.28em;font-size:.75rem;font-weight:600;opacity:.85;margin-bottom:18px}
-  .hero h1{font-size:clamp(2.4rem,6vw,4.2rem);margin-bottom:20px}
-  .hero p{font-size:1.12rem;max-width:520px;margin-bottom:30px;opacity:.95}
-  .btn{display:inline-block;background:var(--wood);color:#fff;padding:14px 30px;border-radius:999px;font-weight:600;font-size:.95rem;transition:.2s}
-  .btn:hover{background:var(--wood-dark);transform:translateY(-1px)}
+  .hero-inner{max-width:660px}
+  .hero .eyebrow{text-transform:uppercase;letter-spacing:.28em;font-size:.75rem;font-weight:600;opacity:.9;margin-bottom:18px}
+  .hero h1{font-size:clamp(2.4rem,6vw,4.3rem);margin-bottom:14px}
+  .hero .heb{font-family:"Fraunces",serif;font-size:clamp(1.1rem,2.4vw,1.5rem);direction:rtl;opacity:.92;margin-bottom:18px}
+  .hero p{font-size:1.12rem;max-width:540px;margin-bottom:30px;opacity:.95}
+  .btn{display:inline-block;background:var(--teal);color:#fff;padding:14px 30px;border-radius:999px;font-weight:600;font-size:.95rem;transition:.2s}
+  .btn:hover{background:var(--teal-dark);transform:translateY(-1px)}
   .btn-outline{background:transparent;border:1.5px solid rgba(255,255,255,.6);margin-left:12px}
   .btn-outline:hover{background:rgba(255,255,255,.12)}
 
   /* Sections */
   section{padding:88px 0}
-  .section-head{text-align:center;max-width:620px;margin:0 auto 54px}
-  .section-head .eyebrow{text-transform:uppercase;letter-spacing:.24em;font-size:.74rem;font-weight:600;color:var(--wood);margin-bottom:14px}
+  .section-head{text-align:center;max-width:640px;margin:0 auto 54px}
+  .section-head .eyebrow{text-transform:uppercase;letter-spacing:.24em;font-size:.74rem;font-weight:600;color:var(--teal);margin-bottom:14px}
   .section-head h2{font-size:clamp(1.9rem,4vw,2.7rem);margin-bottom:14px}
   .section-head p{color:var(--muted)}
 
@@ -64,32 +69,37 @@
   #shop{background:#efe7db}
   .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:30px}
   .card{background:var(--card);border:1px solid var(--line);border-radius:16px;overflow:hidden;display:flex;flex-direction:column;transition:.2s}
-  .card:hover{transform:translateY(-4px);box-shadow:0 16px 40px rgba(43,32,24,.12)}
-  .card .ph{aspect-ratio:4/3;background-size:cover;background-position:center}
+  .card:hover{transform:translateY(-4px);box-shadow:0 16px 40px rgba(36,28,21,.14)}
+  .card .ph{aspect-ratio:1/1;background-size:cover;background-position:center}
   .card .body{padding:22px;display:flex;flex-direction:column;gap:8px;flex:1}
-  .card h3{font-size:1.25rem}
-  .card .cat{font-size:.72rem;text-transform:uppercase;letter-spacing:.16em;color:var(--accent);font-weight:600}
+  .card h3{font-size:1.22rem}
+  .card .cat{font-size:.72rem;text-transform:uppercase;letter-spacing:.16em;color:var(--teal);font-weight:600}
   .card .desc{color:var(--muted);font-size:.92rem;flex:1}
   .card .row{display:flex;align-items:center;justify-content:space-between;margin-top:10px}
-  .price{font-family:"Fraunces",serif;font-size:1.35rem;font-weight:600}
+  .price{font-family:"Fraunces",serif;font-size:1.3rem;font-weight:600}
+  .price small{font-family:"Inter",sans-serif;font-size:.7rem;color:var(--muted);font-weight:500;display:block;letter-spacing:0}
   .add{background:var(--ink);color:#fff;border:none;padding:9px 16px;border-radius:8px;font-size:.85rem;font-weight:600;cursor:pointer;font-family:inherit}
-  .add:hover{background:var(--wood)}
+  .add:hover{background:var(--teal)}
+  .pricing-note{text-align:center;color:var(--muted);font-size:.85rem;margin-top:34px;font-style:italic}
 
   /* About */
   .about{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
-  .about img{border-radius:18px;height:100%;object-fit:cover}
+  .about img{border-radius:18px;height:100%;max-height:480px;width:100%;object-fit:cover}
   .about h2{font-size:clamp(1.9rem,4vw,2.6rem);margin-bottom:18px}
   .about p{color:var(--muted);margin-bottom:14px}
+  .about .heb{direction:rtl;font-family:"Fraunces",serif;color:var(--ink);font-size:1.15rem;margin-bottom:18px}
 
   /* Contact */
   #contact{background:var(--ink);color:#f6f1ea;text-align:center}
   #contact h2{font-size:clamp(1.9rem,4vw,2.6rem);margin-bottom:14px}
-  #contact p{color:#cdbfae;max-width:520px;margin:0 auto 28px}
+  #contact p{color:#cdbfae;max-width:540px;margin:0 auto 28px}
   .contact-links{display:flex;gap:18px;justify-content:center;flex-wrap:wrap}
   .contact-links a{border:1.5px solid rgba(246,241,234,.3);padding:12px 24px;border-radius:999px;font-weight:500;font-size:.92rem}
-  .contact-links a:hover{background:rgba(246,241,234,.1)}
+  .contact-links a.primary{background:var(--teal);border-color:var(--teal)}
+  .contact-links a:hover{background:rgba(246,241,234,.12)}
+  .contact-links a.primary:hover{background:var(--teal-dark)}
 
-  footer{background:#1f1710;color:#9a8c7c;text-align:center;padding:30px 24px;font-size:.85rem}
+  footer{background:#1a140e;color:#9a8c7c;text-align:center;padding:30px 24px;font-size:.85rem}
   footer a{color:#c9b89f}
 
   /* Cart drawer */
@@ -108,9 +118,10 @@
   .ci .rm{background:none;border:none;color:#b04a3a;cursor:pointer;font-size:.8rem}
   .cart-empty{color:var(--muted);text-align:center;padding:40px 0}
   .drawer-foot{padding:22px;border-top:1px solid var(--line)}
-  .totline{display:flex;justify-content:space-between;font-weight:600;font-size:1.1rem;margin-bottom:16px}
-  .checkout{width:100%;background:var(--wood);color:#fff;border:none;padding:15px;border-radius:10px;font-weight:600;font-size:1rem;cursor:pointer;font-family:inherit}
-  .checkout:hover{background:var(--wood-dark)}
+  .totline{display:flex;justify-content:space-between;font-weight:600;font-size:1.1rem;margin-bottom:6px}
+  .drawer-foot .sub{color:var(--muted);font-size:.78rem;margin-bottom:14px}
+  .checkout{width:100%;background:var(--teal);color:#fff;border:none;padding:15px;border-radius:10px;font-weight:600;font-size:1rem;cursor:pointer;font-family:inherit}
+  .checkout:hover{background:var(--teal-dark)}
   .badge{position:absolute;top:-6px;right:-6px;background:var(--ink);color:#fff;font-size:.68rem;width:18px;height:18px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700}
   .cart-wrap{position:relative}
 
@@ -127,7 +138,10 @@
 <header>
   <div class="wrap">
     <nav>
-      <div class="brand">Wood&nbsp;Flow<span>.</span> Studio</div>
+      <a class="brand" href="#top">
+        <img src="img/logo.jpg" alt="Wood Flow Studio logo" />
+        <span class="txt">WOOD&nbsp;FLOW<span>·</span>STUDIO</span>
+      </a>
       <div class="nav-links">
         <a href="#shop">Shop</a>
         <a href="#about">About</a>
@@ -141,22 +155,23 @@
   </div>
 </header>
 
-<section class="hero">
+<section class="hero" id="top">
   <div class="wrap hero-inner">
-    <div class="eyebrow">Handcrafted in the workshop</div>
-    <h1>Timber, shaped with patience.</h1>
-    <p>Wood Flow Studio makes heirloom furniture and homeware from sustainably sourced timber — each piece cut, joined and finished by hand, made to order.</p>
-    <a href="#shop" class="btn">Shop the collection</a>
-    <a href="#about" class="btn btn-outline">Our story</a>
+    <div class="eyebrow">Olive wood · Hand-poured epoxy</div>
+    <h1>Unique pieces, where wood meets resin.</h1>
+    <div class="heb">עבודות עץ ייחודיות בשילוב אפוקסי</div>
+    <p>Wood Flow Studio crafts one-of-a-kind woodwork — live-edge river tables, hand-poured mezuzahs and bespoke design pieces — each shaped from olive wood and flowing epoxy resin, made to order.</p>
+    <a href="#shop" class="btn">Explore the work</a>
+    <a href="#contact" class="btn btn-outline">Commission a piece</a>
   </div>
 </section>
 
 <section id="why">
   <div class="wrap">
     <div class="features">
-      <div class="feature"><div class="ico">🪵</div><h3>Sustainable timber</h3><p>Locally and responsibly sourced hardwoods, chosen board by board for grain and character.</p></div>
-      <div class="feature"><div class="ico">✋</div><h3>Made by hand</h3><p>Traditional joinery and hand-rubbed natural oil finishes. No flat-pack, no shortcuts.</p></div>
-      <div class="feature"><div class="ico">🚚</div><h3>Made to order</h3><p>Every piece is built when you order it. Bespoke sizes and commissions always welcome.</p></div>
+      <div class="feature"><div class="ico">🫒</div><h3>Olive &amp; character wood</h3><p>Each piece begins with a single slab — olive, walnut and burl chosen for grain, knots and natural live edges.</p></div>
+      <div class="feature"><div class="ico">🌊</div><h3>Hand-poured epoxy</h3><p>Emerald, jade and midnight resin poured by hand to flow through the wood like water through stone.</p></div>
+      <div class="feature"><div class="ico">✡️</div><h3>Made to order</h3><p>From dining tables to mezuzahs, every piece is built for you. Bespoke colours, sizes and commissions welcome.</p></div>
     </div>
   </div>
 </section>
@@ -165,23 +180,25 @@
   <div class="wrap">
     <div class="section-head">
       <div class="eyebrow">The Collection</div>
-      <h2>Pieces for everyday life</h2>
-      <p>A starting selection of signature pieces. Tap a product to add it to your enquiry cart — we confirm timber, finish and lead time before any payment.</p>
+      <h2>Wood &amp; resin, made to order</h2>
+      <p>A selection of signature pieces. Add to your enquiry cart and we'll confirm wood, resin colour, size and lead time before any payment — every piece is poured to order, so no two are alike.</p>
     </div>
     <div class="grid" id="productGrid"></div>
+    <p class="pricing-note">Prices shown are indicative (₪, ILS) and confirmed per piece on enquiry — final price depends on the slab, size and resin chosen.</p>
   </div>
 </section>
 
 <section id="about">
   <div class="wrap about">
-    <img src="https://images.unsplash.com/photo-1601058268499-e52658b8bb88?auto=format&fit=crop&w=900&q=80" alt="Woodworking in the studio" />
+    <img src="img/epoxy-pour.jpg" alt="Hand-pouring teal epoxy resin into olive wood" />
     <div>
       <div class="section-head" style="text-align:left;margin:0 0 18px">
         <div class="eyebrow">Our Story</div>
       </div>
-      <h2>A small studio with a slow philosophy</h2>
-      <p>Wood Flow Studio began with a simple belief: that the things we live with every day should be made to last, and made by hand. We work in small batches, letting the grain of each board guide the final form.</p>
-      <p>From dining tables to chopping boards, every piece carries the marks of its making — and is built to be passed on.</p>
+      <h2>Dreaming up the piece you've imagined</h2>
+      <p class="heb">חולמים על רהיטים ייחודיים ופריטים בעיצוב אישי? אנחנו כאן כדי להגשים את החלום — עבודות עץ ייחודיות בשילוב אפוקסי.</p>
+      <p>Wood Flow Studio is a small workshop built on one idea: that the things in your home should be unique, personal, and made by hand. We pair character timber with hand-poured epoxy, letting the grain of each slab guide where the resin flows.</p>
+      <p>From a live-edge river dining table to an olive-wood mezuzah for the doorway, every piece is designed with you and poured to order — so what you receive is genuinely one of a kind.</p>
       <a href="#shop" class="btn" style="margin-top:8px">Browse the collection</a>
     </div>
   </div>
@@ -190,49 +207,53 @@
 <section id="contact">
   <div class="wrap">
     <h2>Commission a piece</h2>
-    <p>Have something specific in mind? We love bespoke work. Reach out and tell us about your space.</p>
+    <p>Have something in mind — a table, a mezuzah, a gift? Tell us your idea, your space and the colours you love, and we'll bring it to life. The fastest way to reach us is a message on Instagram.</p>
     <div class="contact-links">
-      <a href="https://www.instagram.com/woodflow_studio" target="_blank" rel="noopener">📷 @woodflow_studio</a>
-      <a href="mailto:hello@woodflowstudio.com">✉️ Email us</a>
+      <a class="primary" href="https://www.instagram.com/woodflow_studio" target="_blank" rel="noopener">📷 Message @woodflow_studio</a>
+      <a href="mailto:hello@woodflowstudio.com?subject=Commission enquiry — Wood Flow Studio">✉️ Email us</a>
     </div>
   </div>
 </section>
 
 <footer>
-  <div class="wrap">© <span id="yr"></span> Wood Flow Studio · Handcrafted woodwork · Built with care</div>
+  <div class="wrap">© <span id="yr"></span> Wood Flow Studio · Olive wood &amp; epoxy resin · Handmade to order · <a href="https://www.instagram.com/woodflow_studio" target="_blank" rel="noopener">@woodflow_studio</a></div>
 </footer>
 
 <!-- Cart -->
 <div class="overlay" id="overlay" onclick="closeCart()"></div>
 <aside class="drawer" id="drawer">
-  <div class="drawer-head"><h3>Your Cart</h3><button class="close" onclick="closeCart()">×</button></div>
+  <div class="drawer-head"><h3>Your Enquiry</h3><button class="close" onclick="closeCart()">×</button></div>
   <div class="cart-items" id="cartItems"></div>
   <div class="drawer-foot">
-    <div class="totline"><span>Total</span><span id="cartTotal">£0</span></div>
-    <button class="checkout" onclick="checkout()">Request this order</button>
+    <div class="totline"><span>Indicative total</span><span id="cartTotal">₪0</span></div>
+    <div class="sub">No payment taken — we confirm each piece and price before you commit.</div>
+    <button class="checkout" onclick="checkout()">Send enquiry</button>
   </div>
 </aside>
 
 <script>
   const products = [
-    {id:1,name:"Oak Dining Table",cat:"Furniture",price:1450,desc:"Solid white oak, hand-cut breadboard ends. Seats six.",img:"https://images.unsplash.com/photo-1577140917170-285929fb55b7?auto=format&fit=crop&w=700&q=80"},
-    {id:2,name:"Walnut Cutting Board",cat:"Homeware",price:68,desc:"End-grain American walnut, food-safe oil finish.",img:"https://images.unsplash.com/photo-1594224457860-23f4b6c2a8e9?auto=format&fit=crop&w=700&q=80"},
-    {id:3,name:"Ash Stool",cat:"Furniture",price:240,desc:"Three-legged turned ash stool, light and sturdy.",img:"https://images.unsplash.com/photo-1503602642458-232111445657?auto=format&fit=crop&w=700&q=80"},
-    {id:4,name:"Floating Oak Shelf",cat:"Furniture",price:120,desc:"Solid oak shelf with concealed steel bracket.",img:"https://images.unsplash.com/photo-1532372320572-cda25653a26d?auto=format&fit=crop&w=700&q=80"},
-    {id:5,name:"Carved Serving Bowl",cat:"Homeware",price:95,desc:"Hand-carved from a single block of cherry.",img:"https://images.unsplash.com/photo-1610701596007-11502861dcfa?auto=format&fit=crop&w=700&q=80"},
-    {id:6,name:"Bedside Table",cat:"Furniture",price:380,desc:"Tapered legs, single dovetailed drawer in maple.",img:"https://images.unsplash.com/photo-1538688525198-9b88f6f53126?auto=format&fit=crop&w=700&q=80"}
+    {id:1,name:"Live-Edge River Dining Table",cat:"Tables",price:6500,desc:"Walnut live-edge slab with a flowing dark-resin river, on hand-forged steel legs. Seats six.",img:"img/river-table.jpg"},
+    {id:2,name:"Olive Wood & Resin Coffee Table",cat:"Tables",price:3800,desc:"Single olive slab set with deep black epoxy, on minimal hairpin legs. A statement centrepiece.",img:"img/olive-coffee-table.jpg"},
+    {id:3,name:"Olive Wood Mezuzah — Emerald",cat:"Judaica",price:280,desc:"Olive wood and emerald-green resin with a silver Shin. Each one cut from a different slab.",img:"img/mezuzah-emerald.jpg"},
+    {id:4,name:"Olive Wood Mezuzah — Midnight",cat:"Judaica",price:280,desc:"Olive wood paired with midnight-blue epoxy and a brushed silver Shin. A modern doorway piece.",img:"img/mezuzah-midnight.jpg"},
+    {id:5,name:"Mezuzah Collection — Mixed",cat:"Judaica",price:260,desc:"Choose your colour: jade, emerald, navy or black resin over olive wood. Perfect as a gift.",img:"img/mezuzah-collection.jpg"},
+    {id:6,name:"Olive Burl Slab — Bespoke",cat:"Commission",price:null,desc:"Raw olive burl slabs ready to become a table, wall piece or serving board. Designed with you.",img:"img/burl-slab.jpg"}
   ];
   const cart = {};
   const grid = document.getElementById('productGrid');
   products.forEach(p=>{
     const c=document.createElement('div');c.className='card';
+    const priceHtml = p.price==null
+      ? `<span class="price">Enquire<small>price on request</small></span>`
+      : `<span class="price">₪${p.price.toLocaleString()}<small>indicative</small></span>`;
     c.innerHTML=`<div class="ph" style="background-image:url('${p.img}')"></div>
       <div class="body">
         <div class="cat">${p.cat}</div>
         <h3>${p.name}</h3>
         <div class="desc">${p.desc}</div>
-        <div class="row"><span class="price">£${p.price.toLocaleString()}</span>
-        <button class="add" onclick="add(${p.id})">Add to cart</button></div>
+        <div class="row">${priceHtml}
+        <button class="add" onclick="add(${p.id})">${p.price==null?'Enquire':'Add to enquiry'}</button></div>
       </div>`;
     grid.appendChild(c);
   });
@@ -241,27 +262,27 @@
   function render(){
     const items=document.getElementById('cartItems');
     const ids=Object.keys(cart);
-    let count=0,total=0;
-    if(!ids.length){items.innerHTML='<div class="cart-empty">Your cart is empty.</div>';}
+    let total=0;
+    if(!ids.length){items.innerHTML='<div class="cart-empty">Your enquiry list is empty.</div>';}
     else{
       items.innerHTML=ids.map(id=>{
-        const p=products.find(x=>x.id==id);const q=cart[id];count+=q;total+=p.price*q;
-        return `<div class="ci"><div><div class="nm">${p.name}</div><div class="q">£${p.price.toLocaleString()} × ${q}</div></div>
+        const p=products.find(x=>x.id==id);const q=cart[id];if(p.price)total+=p.price*q;
+        const line=p.price?`₪${p.price.toLocaleString()} × ${q}`:`Price on request × ${q}`;
+        return `<div class="ci"><div><div class="nm">${p.name}</div><div class="q">${line}</div></div>
         <button class="rm" onclick="rm(${id})">Remove</button></div>`;
       }).join('');
     }
-    Object.values(cart).forEach(()=>{});
-    count=Object.entries(cart).reduce((s,[id,q])=>s+q,0);
+    const count=Object.values(cart).reduce((s,q)=>s+q,0);
     document.getElementById('cartCount').textContent=count;
-    document.getElementById('cartTotal').textContent='£'+total.toLocaleString();
+    document.getElementById('cartTotal').textContent='₪'+total.toLocaleString();
   }
   function openCart(){document.getElementById('drawer').classList.add('open');document.getElementById('overlay').classList.add('open');}
   function closeCart(){document.getElementById('drawer').classList.remove('open');document.getElementById('overlay').classList.remove('open');}
   function checkout(){
     const ids=Object.keys(cart);
-    if(!ids.length){alert('Your cart is empty.');return;}
-    const lines=ids.map(id=>{const p=products.find(x=>x.id==id);return `${cart[id]} × ${p.name} (£${p.price})`;}).join('%0D%0A');
-    window.location.href=`mailto:hello@woodflowstudio.com?subject=Order enquiry — Wood Flow Studio&body=Hi Wood Flow Studio,%0D%0A%0D%0AI'd like to enquire about:%0D%0A${lines}%0D%0A%0D%0AName:%0D%0ADelivery address:`;
+    if(!ids.length){alert('Your enquiry list is empty.');return;}
+    const lines=ids.map(id=>{const p=products.find(x=>x.id==id);return `${cart[id]} × ${p.name}${p.price?' (₪'+p.price+')':''}`;}).join('%0D%0A');
+    window.location.href=`mailto:hello@woodflowstudio.com?subject=Enquiry — Wood Flow Studio&body=Hi Wood Flow Studio,%0D%0A%0D%0AI'd love to enquire about:%0D%0A${lines}%0D%0A%0D%0APreferred resin colour:%0D%0AName:%0D%0ADelivery address:`;
   }
   document.getElementById('yr').textContent=new Date().getFullYear();
   render();
